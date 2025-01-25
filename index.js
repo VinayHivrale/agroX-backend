@@ -8,13 +8,18 @@ const errorHandler = require("./middleware/errorHandler");
 connectDB();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port =  4000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
 // Enable CORS for all origins
 app.use(cors());
+
+// Root route to welcome users
+app.get("/", (req, res) => {
+  res.send("Welcome to Meaffe!");
+});
 
 // Route for handling user-related API requests
 app.use("/api/user", require("./routes/user"));

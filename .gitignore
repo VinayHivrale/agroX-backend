@@ -77,3 +77,4 @@ out/
 # Ignore static hosting artifacts
 public/
 static/
+.vercel
