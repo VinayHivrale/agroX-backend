@@ -8,7 +8,7 @@ const errorHandler = require("./middleware/errorHandler");
 connectDB();
 
 const app = express();
-const port =  4000;
+const port = process.env.PORT || 4000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
